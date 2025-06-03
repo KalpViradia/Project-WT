@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# 📝 Project WT – Article Comment Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A backend application built with **Node.js**, **Express**, and **MongoDB** that allows CRUD operations on comments associated with pre-existing articles. Each article can have multiple comments, and users can create, update, or delete those comments.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✅ Implemented Features
 
-### `npm start`
+* Fetch all articles
+* Fetch a single article by ID
+* Add comments to a specific article
+* Edit a comment on an article
+* Delete a comment from an article
+* Proper error handling for invalid IDs
+* MongoDB integration via Mongoose
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+* **Backend**: Node.js, Express.js
+* **Database**: MongoDB (Mongoose)
+* **Utilities**: body-parser, CORS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📦 Installation & Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Node.js and npm
+* MongoDB (local or remote)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Steps
 
-### `npm run eject`
+```bash
+# Clone the repository
+git clone https://github.com/KalpViradia/Project-WT.git
+cd Project-WT
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Install dependencies
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Start the server
+node index.js
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The server runs at: `http://localhost:5000/`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## ⚙️ How It Works
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. The backend serves a list of predefined articles stored in MongoDB.
+2. Users can add comments to these articles by sending a POST request to the appropriate endpoint.
+3. Comments can be updated or deleted using their respective IDs.
+4. All data changes are persisted in the MongoDB database.
+5. Errors such as invalid IDs or missing resources are handled with appropriate messages.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
