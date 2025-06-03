@@ -1,6 +1,6 @@
 # 📝 Project WT – Article Comment Manager
 
-A backend application built with **Node.js**, **Express**, and **MongoDB** that allows CRUD operations on comments associated with pre-existing articles. Each article can have multiple comments, and users can create, update, or delete those comments.
+A full-stack web application built with **Node.js**, **Express**, **MongoDB**, **React**, and **Bootstrap**. This app allows users to view a list of articles and perform full CRUD operations on comments associated with each article.
 
 ---
 
@@ -13,11 +13,13 @@ A backend application built with **Node.js**, **Express**, and **MongoDB** that 
 * Delete a comment from an article
 * Proper error handling for invalid IDs
 * MongoDB integration via Mongoose
+* Responsive frontend built with React & Bootstrap
 
 ---
 
 ## 🛠️ Tech Stack
 
+* **Frontend**: React, Bootstrap, Axios
 * **Backend**: Node.js, Express.js
 * **Database**: MongoDB (Mongoose)
 * **Utilities**: body-parser, CORS
@@ -37,24 +39,35 @@ A backend application built with **Node.js**, **Express**, and **MongoDB** that 
 # Clone the repository
 git clone https://github.com/KalpViradia/Project-WT.git
 cd Project-WT
+```
 
-# Install dependencies
+#### Backend Setup
+
+```bash
+cd backend
 npm install
-
-# Start the server
 node index.js
 ```
 
-The server runs at: `http://localhost:5000/`
+#### Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+The backend runs at: `http://localhost:5000/`
+The frontend runs at: `http://localhost:3000/`
 
 ---
 
 ## ⚙️ How It Works
 
-1. The backend serves a list of predefined articles stored in MongoDB.
-2. Users can add comments to these articles by sending a POST request to the appropriate endpoint.
-3. Comments can be updated or deleted using their respective IDs.
-4. All data changes are persisted in the MongoDB database.
-5. Errors such as invalid IDs or missing resources are handled with appropriate messages.
+1. The backend provides a REST API to serve articles and handle comment operations (create, update, delete).
+2. The frontend displays articles in a clean layout using Bootstrap for styling and Axios for API calls.
+3. Users can view all articles, open an article to see its comments, and perform CRUD operations on those comments.
+4. All changes are synced with the MongoDB database.
+5. Error handling is in place for invalid requests and IDs.
 
 ---
